@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group android:checkableBehavior="single">
+
+
+
+
+        <item
+            android:id="@+id/ProfileID"
+            android:title="Profile"
+            android:visible="false"
+            >
+
+        </item>
+
+        <item
+            android:id="@+id/EditProfileID"
+            android:title="Edit Profile"
+            android:icon="@drawable/edit_profle"
+            ></item>
+
+        <item
+            android:id="@+id/FindFriendsID"
+            android:title="Find Friends"
+            android:icon="@drawable/friendship_icon"
+            ></item>
+
+        <item
+            android:id="@+id/RequestID"
+            android:title="All Request"
+            android:icon="@drawable/add_friends"
+            ></item>
+
+        <item
+            android:icon="@drawable/logout"
+            android:id="@+id/LogoutID"
+            android:title="LogOut"
+            ></item>
+
+        <item
+            android:id="@+id/EarnityID"
+            android:title="Earn"
+            android:icon="@drawable/earnmoney"
+            ></item>
+
+        <item
+            android:id="@+id/WithDowID"
+            android:title="Withdraw"
+            android:icon="@drawable/doller"
+            ></item>
+
+
+
+
+        <item
+            android:id="@+id/ShareID"
+            android:title="Share"
+            android:icon="@drawable/share"
+            ></item>
+
+        <item
+            android:id="@+id/AdminID"
+            android:title="Admin Console"
+            android:icon="@drawable/admin"
+            ></item>
+
+    </group>
+
+
+</menu>

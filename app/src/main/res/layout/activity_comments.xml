@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CommentsActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/CommentToolbarID"
+        android:background="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+
+                <TextView
+                    android:layout_toRightOf="@+id/myimage"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="My Comments"
+                    android:textColor="@android:color/white"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/CommentRecylearViewID"
+        android:layout_below="@+id/CommentToolbarID"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/one"
+        android:layout_height="match_parent">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_toLeftOf="@+id/SendButtonID"
+            android:layout_width="match_parent"
+            android:layout_marginRight="5dp"
+            android:elevation="5dp"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="50dp">
+
+
+
+
+            <EditText
+                android:id="@+id/CommentsTextID"
+                android:background="@drawable/white_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:inputType="text"
+                android:hint="Enter Comment"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageButton
+            android:id="@+id/CommentsSendID"
+            android:layout_width="50dp"
+            android:src="@drawable/send_icon"
+            android:elevation="5dp"
+            android:layout_marginRight="7dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/send_design"
+            android:layout_alignParentRight="true"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

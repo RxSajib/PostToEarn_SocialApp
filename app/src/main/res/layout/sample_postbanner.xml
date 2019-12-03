@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="7dp"
+        android:elevation="7dp"
+        app:cardCornerRadius="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/MprofileImageID"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+
+                />
+
+            <TextView
+                android:id="@+id/BannerNameID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/MprofileImageID"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/BannerDescptrionID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/BannerNameID"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/MprofileImageID"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+
+            <TextView
+                android:id="@+id/TimeID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="13sp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/bannerImageID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/BannerDescptrionID"
+                android:layout_marginTop="7dp"
+                android:scaleType="centerCrop"
+                />
+
+            <RelativeLayout
+                android:layout_below="@+id/bannerImageID"
+                android:layout_width="match_parent"
+                android:layout_height="55dp">
+
+                <ImageView
+                    android:id="@+id/LikeButtonID"
+                    android:layout_width="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/black_like"
+                    />
+
+                <TextView
+                    android:id="@+id/LikeCountID"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="7dp"
+                    android:text="0 Like"
+                    android:textColor="@android:color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/LikeButtonID"
+                    />
+
+                <ImageView
+                    android:id="@+id/CommentButtonID"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/coment"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

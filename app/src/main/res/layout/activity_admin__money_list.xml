@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_MoneyList">
+
+    <ImageView
+        android:id="@+id/idea"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/moneyidea"
+        />
+    <TextView
+        android:id="@+id/ideatext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idea"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/black"
+        android:text="No Winner Found"
+        />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/AdminMneyToolbarID"
+        android:layout_width="match_parent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        android:layout_height="wrap_content"></androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_below="@id/AdminMneyToolbarID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/AdminListID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp"></androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

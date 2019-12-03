@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeletePostActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/DImageID"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:scaleType="centerCrop"
+        />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="240dp"
+            android:layout_height="330dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <RelativeLayout
+                        android:id="@+id/cat"
+                        android:layout_width="match_parent"
+                        android:layout_height="80sp">
+
+
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="25sp"
+                            android:src="@drawable/right_arrow"
+                            android:layout_height="25sp">
+                        </ImageView>
+
+                        <TextView
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:textSize="20sp"
+                            android:textColor="@android:color/black"
+                            android:text="Users"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </TextView>
+
+
+
+                        <RelativeLayout
+                            android:id="@+id/thow"
+                            android:background="#7C106C"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_height="35dp"
+                                android:src="@drawable/userwhitw"
+                                />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/nameID"
+                            android:layout_toRightOf="@+id/thow"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20sp"
+                            android:textSize="20sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+
+                   <RelativeLayout
+                       android:layout_below="@+id/cat"
+                       android:layout_marginTop="5dp"
+                       android:id="@+id/cone"
+                       android:layout_width="match_parent"
+                       android:layout_height="80dp">
+
+                       <ImageView
+                           android:layout_centerVertical="true"
+                           android:layout_alignParentRight="true"
+                           android:layout_marginRight="10dp"
+                           android:layout_width="25sp"
+                           android:src="@drawable/right_arrow"
+                           android:layout_height="25sp">
+                       </ImageView>
+
+                       <TextView
+                           android:layout_centerHorizontal="true"
+                           android:layout_marginTop="5dp"
+                           android:textSize="20sp"
+                           android:textColor="@android:color/black"
+                           android:text="Post Descptrion"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content">
+                       </TextView>
+
+                       <RelativeLayout
+                           android:id="@+id/fthree"
+                           android:background="#7C106C"
+                           android:layout_width="70dp"
+                           android:layout_height="match_parent">
+
+                           <ImageView
+                               android:layout_width="35dp"
+                               android:layout_centerHorizontal="true"
+                               android:layout_centerVertical="true"
+                               android:layout_height="35dp"
+                                android:src="@drawable/list"
+                               />
+
+                       </RelativeLayout>
+
+                       <TextView
+                           android:id="@+id/DescptrionID"
+                           android:layout_marginRight="20sp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_toRightOf="@+id/fthree"
+                           android:textSize="20sp"
+                           android:textStyle="normal"
+                           android:layout_centerVertical="true"
+                           android:layout_marginStart="20sp"
+                           />
+
+
+                   </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ctwo"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/cone"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+                        <ImageView
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="25sp"
+                            android:src="@drawable/right_arrow"
+                            android:layout_height="25sp">
+                        </ImageView>
+
+
+                        <RelativeLayout
+                            android:id="@+id/ftwo"
+                            android:background="#7C106C"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_height="35dp"
+                                android:src="@drawable/clock"
+                                />
+
+                        </RelativeLayout>
+
+
+                        <TextView
+                            android:id="@+id/TimeID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/ftwo"
+                            android:textSize="20sp"
+                            android:textStyle="normal"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20sp"
+                            />
+
+                        <TextView
+                            android:textSize="20sp"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@android:color/black"
+                            android:text="Post Time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/AllpostID"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@id/ctwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp">
+                        <ImageView
+                            android:id="@+id/postimage"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_width="25sp"
+                            android:src="@drawable/right_arrow"
+                            android:layout_height="25sp">
+                        </ImageView>
+
+
+                        <RelativeLayout
+                            android:id="@+id/fone"
+                            android:background="#7C106C"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_height="35dp"
+                                android:src="@drawable/toal"
+                                />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:textSize="20sp"
+                            android:layout_centerHorizontal="true"
+                            android:textColor="@android:color/black"
+                            android:text="Total Post"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </TextView>
+
+
+
+                        <TextView
+                            android:id="@+id/TotalPostID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/fone"
+                            android:textSize="20sp"
+                            android:textStyle="normal"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="20sp"
+                            />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+
+
+            </ScrollView>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/ButtonDeleteID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/delete_button"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="25dp"
+        android:visibility="invisible"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:text="delete post"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/GobackButtinID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textColor="@android:color/holo_red_light"
+        android:text=">> Go Back"
+        android:textSize="15dp"
+        />
+
+
+
+
+</RelativeLayout>

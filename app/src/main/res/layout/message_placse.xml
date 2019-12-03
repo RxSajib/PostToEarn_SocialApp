@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+        <RelativeLayout
+            android:id="@+id/VoiceViewID"
+            android:visibility="visible"
+            android:layout_marginTop="10dp"
+            android:layout_width="120dp"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/sender_message_design"
+            android:layout_marginRight="10dp"
+            android:layout_height="50dp">
+
+
+           <ImageView
+               android:id="@+id/PlayButtonID"
+               android:layout_width="35dp"
+               android:layout_centerVertical="true"
+               android:layout_height="35dp">
+           </ImageView>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/PlayButtonID"
+                android:textSize="16sp"
+                android:layout_marginLeft="5dp"
+                android:visibility="visible"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:text="Sajib"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+            <ProgressBar
+                android:id="@+id/SederProgressbarID"
+                android:layout_marginStart="5dp"
+                android:indeterminate="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:layout_toRightOf="@+id/PlayButtonID"
+                android:indeterminateTint="@android:color/white"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+
+                <TextView
+                    android:id="@+id/SenderVoiceDateID"
+                    android:textColor="@android:color/white"
+                    android:textSize="8sp"
+                    android:layout_toRightOf="@+id/PlayButtonID"
+                    android:layout_marginTop="2dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/SederVoiceTimeID"
+                android:textColor="@android:color/white"
+                android:textSize="8sp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/PlayProgressID"
+                android:layout_marginTop="2dp"
+
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+
+        </RelativeLayout>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/ReciverAudioID"
+            android:visibility="invisible"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/default_image"
+            />
+
+
+        <RelativeLayout
+            android:layout_toRightOf="@+id/ReciverAudioID"
+            android:id="@+id/VoiceRecliView"
+            android:layout_width="120dp"
+            android:layout_marginLeft="5dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="false"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/reciver_message_design"
+            android:padding="5dp"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:id="@+id/PlayRecVioiceID"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/playbutton_black"></ImageView>
+
+            <TextView
+                android:id="@+id/voice"
+                android:layout_toRightOf="@+id/PlayRecVioiceID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:visibility="visible"
+                android:text="Audio"
+                android:textColor="@android:color/black"
+                android:textSize="16sp">
+
+            </TextView>
+
+
+
+            <TextView
+                android:id="@+id/ReciverVoiceTimeID"
+                android:textColor="@android:color/black"
+                android:textSize="8sp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="2dp"
+
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"/>
+
+
+            <TextView
+                android:id="@+id/ReciverVoiceDateID"
+                android:textColor="@android:color/black"
+                android:textSize="8sp"
+                android:layout_toRightOf="@+id/PlayRecVioiceID"
+                android:layout_marginTop="2dp"
+
+                android:layout_width="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:padding="3dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="30dp"
+                        android:id="@+id/ReciverImageID"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginLeft="3dp"
+                        android:src="@drawable/default_image"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/ReciverLayoutID"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="5dp"
+                        android:padding="5dp"
+                        android:layout_toRightOf="@id/ReciverImageID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+
+
+                    <TextView
+                        android:id="@+id/ReciverMessageID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+                        android:textColor="@android:color/black"
+                        android:layout_marginLeft="4dp"
+                        />
+                    <TextView
+                        android:textColor="#BDA3A3"
+                        android:id="@+id/ReciverTimetTimeID"
+                        android:layout_marginTop="3dp"
+                        android:textSize="10sp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_below="@+id/ReciverMessageID"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="4dp"
+                        android:layout_height="wrap_content"></TextView>
+
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:id="@+id/ReciverMessageImageID"
+                        android:layout_width="match_parent"
+                        android:elevation="3dp"
+                        android:layout_toRightOf="@+id/ReciverImageID"
+                        android:layout_marginTop="15dp"
+                        android:layout_height="150dp"
+                        android:layout_marginStart="5dp"
+                        android:scaleType="centerCrop"
+                        />
+
+
+                    <TextView
+                        android:id="@+id/ImageTimeID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/white"
+                        android:layout_below="@+id/ReciverMessageImageID"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="10dp"
+                        />
+
+
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:padding="3dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/layoutIDID"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:padding="6dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/SenderMessageID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="13dp"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@android:color/white"
+                            />
+                        <TextView
+                            android:textColor="#BDA3A3"
+                            android:id="@+id/SendertextTimeID"
+                            android:layout_marginTop="3dp"
+                            android:textSize="10sp"
+                            android:layout_below="@+id/SenderMessageID"
+                            android:layout_width="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="4dp"
+                            android:layout_height="wrap_content"></TextView>
+
+
+                    </RelativeLayout>
+
+
+
+
+                    <ImageView
+                        android:id="@+id/SenderMessageImageID"
+                        android:layout_width="match_parent"
+                        android:elevation="3dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="15dp"
+                        android:layout_height="150dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        />
+
+                    <TextView
+                        android:id="@+id/SenderTimeID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/SenderMessageImageID"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp"
+                        />
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

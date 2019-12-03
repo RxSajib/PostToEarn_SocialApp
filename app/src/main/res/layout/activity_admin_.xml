@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_Activity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/AdminToolbarID"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        android:layout_height="wrap_content">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/AdminToolbarID"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/icond"
+            android:layout_width="100dp"
+            android:src="@drawable/password"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="50dp"
+            android:layout_height="70dp">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/icond"
+            android:textSize="25sp"
+            android:textColor="@android:color/black"
+            android:text="Welcome Back,"
+            android:layout_marginStart="20dp"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <TextView
+            android:id="@+id/access"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/welcome"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:textSize="17sp"
+            android:text="Please To Login And Access"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <EditText
+            android:id="@+id/AdminEmialID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/access"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:singleLine="true"
+            android:padding="10dp"
+            android:hint="Enter Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/adminedittet_design"
+            />
+
+        <EditText
+            android:id="@+id/AdminPasswordID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_below="@id/AdminEmialID"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:hint="Enter Password"
+            android:inputType="textEmailAddress"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/adminedittet_design"
+            />
+
+        <Button
+            android:id="@+id/AdminLoginID"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/adminedittet_design"
+            android:text="Login"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@+id/AdminPasswordID"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

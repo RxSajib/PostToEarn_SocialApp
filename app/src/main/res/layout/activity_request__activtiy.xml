@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Request_Activtiy">
+
+
+    <ImageView
+        android:id="@+id/NorequestImageID"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/no_request"
+        android:layout_width="120dp"
+        android:layout_height="120dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/NorequestTextID"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/NorequestImageID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:text="No Friends Request Found"
+        android:layout_height="wrap_content"></TextView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/RequestToolbarID"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_below="@id/RequestToolbarID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/FriendsRequestID"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

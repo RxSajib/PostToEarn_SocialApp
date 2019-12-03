@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6f00c5</color>
+    <color name="colorPrimaryDark">#6f00c5</color>
+    <color name="colorAccent">#D53BFF</color>
+
+    <color name="red">#F73939</color>
+
+    <color name="clickdown">#BCC8FF</color>
+    <color name="clickup">#fff</color>
+
+</resources>

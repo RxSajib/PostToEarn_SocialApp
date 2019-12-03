@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/singin"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <TextView
+        android:layout_below="@+id/image"
+        android:id="@+id/singin"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Sign In"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+    
+    <EditText
+        android:id="@+id/LoginEmailID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/singin"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:singleLine="true"
+        android:layout_marginTop="30dp"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#F1F1F1"
+        android:padding="10dp"
+        android:backgroundTint="#6f00c5"
+        />
+
+    <EditText
+        android:id="@+id/LoginPasswordID"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LoginEmailID"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#F1F1F1"
+        android:padding="10dp"
+        android:backgroundTint="#6f00c5"
+        />
+
+    <Button
+        android:id="@+id/LoginButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LoginPasswordID"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/google"
+        android:layout_marginLeft="25dp"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        android:text="Sing In Account"
+        />
+
+    <TextView
+        android:id="@+id/haveAccountI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/LoginFPassword"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7dp"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:text="Need A New Account (Sign Up)"
+        />
+
+    <TextView
+        android:id="@+id/LoginFPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_above="@+id/OR"
+        android:textSize="14dp"
+        android:textColor="#fff"
+        android:layout_marginBottom="7dp"
+        android:layout_centerHorizontal="true"
+        android:text = "Forgot Password?"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:id="@+id/logintextID"
+        android:text="Sign In"
+        android:textColor="@android:color/white"
+        android:layout_above="@+id/progressBarlogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        />
+
+    <ImageView
+        android:id="@+id/DangerIconID"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/danger"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@+id/LoginButtonID"
+        />
+    <TextView
+        android:id="@+id/DangerTextID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/LoginButtonID"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/DangerIconID"
+        />
+
+
+    <ProgressBar
+        android:layout_centerHorizontal="true"
+        android:id="@+id/progressBarlogin"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="70dp"
+        android:layout_above="@+id/haveAccountI"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:indeterminateTint="@android:color/white"
+        android:indeterminate="true" />
+
+    <TextView
+        android:id="@+id/OR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/PhoneSiginIDButtonID"
+        android:textSize="17dp"
+        android:text="OR"
+        android:layout_marginBottom="7dp"
+        />
+
+    <Button
+        android:id="@+id/PhoneSiginIDButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="Phone Sign In"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/google"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        />
+
+
+
+
+
+</RelativeLayout>

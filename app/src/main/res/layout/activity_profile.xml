@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ProfileToolbarID"
+        android:background="@drawable/background"
+        app:titleTextColor="@android:color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Switch
+                android:visibility="gone"
+                android:id="@+id/SwitchID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/ProfileProgressID"
+                />
+
+
+
+            <ProgressBar
+                android:id="@+id/ProfileProgressID"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="10dp"
+                android:indeterminateTint="@android:color/white"
+                android:layout_alignParentRight="true"
+                android:indeterminate="true"
+                />
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:id="@+id/ProfilenameToolbar"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <ScrollView
+        android:layout_below="@+id/ProfileToolbarID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/oneeee"
+                android:layout_centerHorizontal="true"
+                android:layout_width="140dp"
+                android:gravity="center"
+                android:layout_height="140dp">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/ProfileImageIDID"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/default_profileimage"
+                />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:id="@+id/AddImageID"
+                        android:src="@drawable/plus"
+                        android:elevation="2dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+<RelativeLayout
+    android:layout_marginTop="15dp"
+    android:layout_below="@+id/oneeee"
+    android:layout_width="match_parent"
+    android:layout_marginRight="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_height="wrap_content">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/namelayout"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:inputType="text"
+            android:singleLine="true"
+            android:hint="Enter Your Full Name"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/namelayout"
+        android:id="@+id/fullnamelayout"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your UserName"
+            android:inputType="text"
+            android:padding="10dp"
+            android:singleLine="true">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:id="@+id/numberlayout"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/fullnamelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/CodeLayoutID"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="100dp"
+                android:padding="10dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:hint="+1 (Code)"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/MobID"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/CodeLayoutID"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:hint="Enter Your Mobile Number"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+ <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:id="@+id/emaillayoutID"
+        android:layout_below="@+id/numberlayout"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:inputType="textEmailAddress"
+            android:hint="Enter Your Email Adddress"
+            android:singleLine="true"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textfield.TextInputEditText>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/radiolayout"
+        android:layout_below="@+id/emaillayoutID"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:textSize="17dp"
+    android:textColor="@android:color/black"
+    android:layout_height="wrap_content"
+    android:text="Select Gender"
+    />
+
+    <RadioGroup
+        android:layout_gravity="right"
+        android:layout_marginTop="30dp"
+        android:id="@+id/ReadioGroupID"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <RadioButton
+            android:id="@+id/MaleID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="Male"
+            />
+
+            <RadioButton
+                android:id="@+id/FemailID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="Female"
+            android:layout_marginStart="30dp"
+            />
+
+        <RadioButton
+            android:id="@+id/OthersID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="Others"
+            android:layout_marginStart="30dp"
+            />
+
+
+
+
+    </RadioGroup>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layoyr"
+        android:layout_below="@+id/radiolayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/BirthInput"
+            android:layout_marginRight="40dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                android:hint="Date Of Birth"
+                android:singleLine="true"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageView
+            android:id="@+id/DateImageID"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="35dp"
+            android:src="@drawable/calendar"
+            android:layout_height="35dp">
+        </ImageView>
+
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relanlayout"
+        android:layout_below="@+id/layoyr"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/Relanship"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Relationship"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:singleLine="true">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/idlayout"
+        android:layout_below="@+id/relanlayout"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/IDNumberID"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:hint="PP/NIN"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/joindatelayout"
+        android:layout_below="@+id/idlayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="40dp"
+            android:id="@+id/JoinDateID"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:inputType="textEmailAddress"
+                android:hint="Join Date"
+                android:singleLine="true"
+                android:layout_height="wrap_content">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/JoinCalenderID"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/calendar"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/countrylayout"
+        android:layout_below="@+id/joindatelayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/CountryID"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Work"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:singleLine="true">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/worklayout"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/countrylayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/WorkID"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Country"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:singleLine="true">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+    <Button
+        android:id="@+id/UpdateButtonID"
+        android:layout_below="@+id/worklayout"
+        android:layout_width="170dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/update_design"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        android:text="Update Profile"
+        android:layout_alignParentRight="true"
+        />
+
+   </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

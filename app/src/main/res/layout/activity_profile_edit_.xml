@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileEdit_Activity">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/ItemsUpdateButtonID"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/done_icon"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_height="wrap_content">
+
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+    <RelativeLayout
+        android:id="@+id/onee"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/EditImageID"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:src="@drawable/default_profileimage"
+            />
+
+        <TextView
+            android:id="@+id/EditUserName"
+            android:text="Username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EditImageID"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            />
+
+
+        <TextView
+            android:id="@+id/EditJoinDateID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/EditUserName"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/onee"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:layout_height="wrap_content">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/fullnamelayout"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/FullnameID"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:padding="10dp"
+                        android:hint="Enter Full Name"
+                        android:inputType="text"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mobilenumberfilds"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/fullnamelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/MobileNumberID"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:padding="10dp"
+                        android:hint="Enter Mobile Number"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/emailaddressfil"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/mobilenumberfilds"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/EmailAddressID"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:hint="Enter Your Email Address"
+                            android:singleLine="true"
+                            android:inputType="textEmailAddress"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/genderlayout"
+                    android:layout_below="@+id/emailaddressfil"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textSize="20sp"
+                        android:id="@+id/gendertextID"
+                        android:textColor="@android:color/black"
+                        android:text="Select Gender"
+                        android:layout_height="wrap_content">
+                    </TextView>
+
+                   <RadioGroup
+                       android:id="@+id/RadioGroupID"
+                       android:layout_below="@+id/gendertextID"
+                       android:layout_marginTop="5dp"
+                       android:layout_width="match_parent"
+                       android:orientation="horizontal"
+                       android:layout_height="wrap_content">
+
+                       <RadioButton
+                           android:id="@+id/MaleButtonID"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Male"
+                           />
+
+                       <RadioButton
+                           android:id="@+id/FemailButtonID"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Female"
+                           android:layout_marginStart="20sp"
+                           />
+
+                       <RadioButton
+                           android:id="@+id/OthersButtonID"
+                           android:layout_marginStart="20sp"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text="Others"
+                           />
+
+                   </RadioGroup>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/birthlayout"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/genderlayout"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="40dp"
+                        android:id="@+id/DateOFBirthID"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:hint="Date of Birth"
+                            android:singleLine="true"
+                            android:inputType="textEmailAddress"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <ImageView
+                        android:id="@+id/DateOfBirthButtonID"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/calendar"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/relanshiplayout"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/birthlayout"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/RelationshipID"
+
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:hint="Relationship"
+                            android:singleLine="true"
+                            android:inputType="textEmailAddress"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/idnumberlayout"
+                    android:layout_below="@+id/relanshiplayout"
+                    android:layout_marginTop="5dp"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/IDNOID"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:hint="PP/NIN"
+                            android:singleLine="true"
+                            android:inputType="textEmailAddress"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/joindatelayout"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_below="@+id/idnumberlayout"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/JoinDateIDID"
+                        android:layout_marginRight="40dp"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:hint="Join Date"
+                            android:singleLine="true"
+                            android:inputType="textEmailAddress"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <ImageView
+                        android:id="@+id/JoinCalenderIDID"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/calendar"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/joindatelayout"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/countrylayout"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/CountryIDID"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:hint="Your Work"
+                            android:singleLine="true"
+                            android:inputType="textEmailAddress"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginBottom="20sp"
+                    android:layout_width="match_parent"
+                    android:layout_below="@+id/countrylayout"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:id="@+id/WorkIDID"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:padding="10dp"
+                            android:hint="Your  Country"
+                            android:singleLine="true"
+                            android:inputType="textEmailAddress"
+                            android:layout_height="wrap_content">
+
+                        </com.google.android.material.textfield.TextInputEditText>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

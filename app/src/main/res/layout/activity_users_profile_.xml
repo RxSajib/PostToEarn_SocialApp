@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UsersProfile_Activity">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/UsersProfileToolbarID"
+        android:background="@drawable/background"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Request Panel"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/UsersProfileToolbarID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/NumberID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+
+        <RelativeLayout
+            android:id="@+id/one"
+            android:background="#FFF9F9"
+            android:layout_width="match_parent"
+            android:elevation="3dp"
+            android:layout_height="120dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="80dp"
+                android:id="@+id/ProfileImageID"
+                android:layout_height="80dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/default_profileimage"
+                />
+
+            <RelativeLayout
+                android:layout_toRightOf="@id/ProfileImageID"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/UserNameID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17dp"
+                    android:text="Mr Sajib Roy"
+                    android:textStyle="bold"
+                    />
+
+                <Button
+                    android:id="@+id/RequestButtonID"
+                    android:layout_width="120dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/UserNameID"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14dp"
+                    android:text="Request"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/background"
+                    />
+
+                <Button
+                    android:id="@+id/CancelRequestButtonID"
+                    android:layout_width="120dp"
+                    android:layout_height="35dp"
+                    android:layout_below="@id/UserNameID"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Unfriend"
+                    android:layout_toRightOf="@+id/RequestButtonID"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/holo_red_light"
+                    />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/one"
+            android:background="#fff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+
+                <Button
+                    android:id="@+id/FollowButtonID"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16dp"
+                    android:textColor="@android:color/white"
+                    android:text="Follow Me"
+                    android:elevation="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="#9C27B0"
+                    />
+
+            </RelativeLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="25dp"
+                app:cardCornerRadius="25dp"
+                android:elevation="10dp"
+                android:layout_marginRight="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="220dp">
+
+
+
+
+
+                <RelativeLayout
+                    android:gravity="center"
+                    android:background="#FDFDFD"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/tt"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+
+                       <LinearLayout
+                           android:id="@+id/onett"
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content">
+
+
+
+
+                      <TextView
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:textSize="17sp"
+                          android:text="Name :"
+                          />
+
+                        <TextView
+                            android:id="@+id/NameIDDID"
+                          android:layout_width="0dp"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+                          android:textSize="17sp"
+                          android:text="Name is hear"
+                          />
+
+                       </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ttt"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/tt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:text="Working :"
+                            />
+                        <TextView
+                            android:id="@+id/WorkIDID"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:text="Working is hear :"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tttt"
+                        android:weightSum="2"
+                        android:layout_below="@+id/ttt"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:text="Sex :"
+                            />
+
+                        <TextView
+                            android:id="@+id/gender"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:text="Sex :"
+                        />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ttttt"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@id/tttt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:text="Age :"
+                            />
+
+                        <TextView
+                            android:id="@+id/AgeID"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:text="Age is hear :"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_below="@+id/ttttt"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:text="Country"
+                            />
+
+                        <TextView
+                            android:id="@+id/countryID"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:textSize="17sp"
+                            android:text="Country is hear :"
+                            />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/GobackID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text=">>Go back"
+        />
+
+</RelativeLayout>

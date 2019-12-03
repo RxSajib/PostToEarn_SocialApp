@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddpostUpdate_Activity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        app:titleTextColor="@android:color/white"
+        android:id="@+id/PostToolbarID"
+        android:background="@drawable/background"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/MprogressiD"
+                android:layout_width="40dp"
+                android:indeterminateTint="@android:color/white"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="17sp"
+                android:text="Add A New Post"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <RelativeLayout
+        android:layout_below="@+id/PostToolbarID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:src="@drawable/default_galleryicon"
+            android:id="@+id/PostImageID"
+            android:scaleType="fitXY"
+            />
+
+        <EditText
+            android:id="@+id/PostTitleID"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/PostImageID"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:hint="Enter Title"
+            android:inputType="text"
+            />
+
+
+
+        <Button
+            android:id="@+id/AddPostButtonID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Add post"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="#2196F3"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

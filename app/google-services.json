@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1049376187744",
+    "firebase_url": "https://tomas-social-app.firebaseio.com",
+    "project_id": "tomas-social-app",
+    "storage_bucket": "tomas-social-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1049376187744:android:af5f4474d779453e",
+        "android_client_info": {
+          "package_name": "com.example.socialnapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1049376187744-1ns4bmvru81t3vtdjgifmfqg3vjo0cts.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.socialnapp",
+            "certificate_hash": "19034182dff611a1bec4bf9f69fb00a6b72bd576"
+          }
+        },
+        {
+          "client_id": "1049376187744-md4hu475qqtsfc8eejtthqn98mik09ln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJvy1cCWSq8m5RvEzldkenrW0kG6vX3UI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1049376187744-md4hu475qqtsfc8eejtthqn98mik09ln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

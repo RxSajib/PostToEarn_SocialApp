@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".RegistationActivity">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/signup"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        />
+
+
+    <TextView
+        android:layout_below="@+id/image"
+        android:id="@+id/singin"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Sign Up"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+
+    <EditText
+        android:id="@+id/REmailID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/singin"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:singleLine="true"
+        android:layout_marginTop="30dp"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#F1F1F1"
+        android:padding="10dp"
+        android:backgroundTint="#6f00c5"
+        />
+
+    <EditText
+        android:id="@+id/RPasswordID"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/REmailID"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#F1F1F1"
+        android:padding="10dp"
+        android:backgroundTint="#6f00c5"
+        />
+
+    <EditText
+        android:id="@+id/RCPasswordID"
+        android:layout_width="match_parent"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RPasswordID"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:inputType="textPassword"
+        android:hint="Retype Password"
+        android:layout_marginTop="10dp"
+        android:textSize="25dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#F1F1F1"
+        android:padding="10dp"
+        android:backgroundTint="#6f00c5"
+        />
+
+    <Button
+        android:id="@+id/SingUpButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/RCPasswordID"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/google"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@android:color/white"
+        android:textSize="17sp"
+        android:text="Sing up In Account"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SingUpButtonID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/AlreaddyHvaeAccSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/SingGoogleButtonID"
+        android:layout_marginBottom="7dp"
+        android:text="Already Have A Account (Sing In)"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:textSize="17dp" />
+
+    <Button
+        android:id="@+id/SingGoogleButtonID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:text="Google Sign In"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/google"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:id="@+id/RegintextID"
+        android:text="Sing Up"
+        android:textColor="@android:color/white"
+        android:layout_above="@+id/progressBarReg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        />
+
+
+    <ProgressBar
+        android:layout_centerHorizontal="true"
+        android:id="@+id/progressBarReg"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="50dp"
+        android:layout_above="@+id/AlreaddyHvaeAccSignUp"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@android:color/white"
+        android:layout_marginBottom="10dp"
+        android:indeterminate="true" />
+
+
+    <ImageView
+        android:id="@+id/DangerRIconID"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/danger"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@+id/SingUpButtonID"
+        />
+    <TextView
+        android:id="@+id/DangerRTextID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/SingUpButtonID"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/DangerRIconID"
+        />
+
+</RelativeLayout>

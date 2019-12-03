@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityFragment">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <ImageView
+          android:id="@+id/NewsImageID"
+          android:layout_width="120dp"
+          android:src="@drawable/news"
+          android:layout_centerHorizontal="true"
+          android:layout_centerVertical="true"
+          android:layout_height="120dp">
+      </ImageView>
+
+      <TextView
+          android:id="@+id/PostTextID"
+          android:layout_below="@+id/NewsImageID"
+          android:layout_marginTop="10dp"
+          android:text="No Post Found"
+          android:textSize="17dp"
+          android:textColor="@android:color/black"
+          android:layout_centerHorizontal="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+      </TextView>
+
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/FriendListBUttonID"
+          android:layout_width="wrap_content"
+          android:backgroundTint="#ff22"
+          android:elevation="5dp"
+          android:src="@drawable/friendshipwhite"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentRight="true"
+          android:layout_margin="10dp"
+          android:layout_height="wrap_content">
+
+
+      </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/ActivityID"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+
+      </androidx.recyclerview.widget.RecyclerView>
+
+
+  </RelativeLayout>
+
+</FrameLayout>

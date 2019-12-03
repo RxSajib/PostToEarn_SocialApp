@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Entry_Activity">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/HelpButtonID"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:backgroundTint="#BEA1FF"
+        android:elevation="7dp"
+        android:layout_margin="7dp"
+        android:src="@drawable/doller"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:background="@drawable/background"
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ImageEID"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageView
+            android:id="@+id/all"
+            android:layout_width="40dp"
+            android:layout_height="65dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/ImageEID"
+            android:src="@drawable/dollarwhite"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:textColor="@android:color/white"
+            android:layout_toRightOf="@id/all"
+            android:layout_centerVertical="true"
+            android:textStyle="bold"
+            android:text="0"
+            />
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:text="Unknown Users"
+            android:id="@+id/NameIDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ImageEID"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_below="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardone"
+                android:elevation="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="90dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/l"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/redlike"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/l"
+                        android:text="Heart"
+                        android:textColor="@android:color/black"
+                        android:textSize="30dp" />
+
+                    <TextView
+                        android:id="@+id/LikeID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:text="0"
+                        android:textColor="@android:color/black"
+                        android:textSize="40dp" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/three"
+            android:layout_below="@+id/cardone"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:elevation="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/lo"
+                    android:layout_width="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/coment"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40dp"
+                    android:text="Comments"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/lo"
+                    />
+
+                <TextView
+                    android:id="@+id/CommentID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="40dp"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/four"
+            android:layout_below="@+id/three"
+            android:visibility="gone"
+            android:layout_marginTop="15dp"
+            android:elevation="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/post"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/send_post"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:text="Post"
+                    android:textSize="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/post"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/PostID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textSize="40dp" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/five"
+            android:layout_marginTop="15dp"
+            android:elevation="5dp"
+            android:layout_below="@id/four"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/Followicon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/followmw_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:text="Follow Me"
+                    android:textSize="30dp"
+                    android:textColor="@android:color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/Followicon"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/FollowCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textSize="40dp" />
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:elevation="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/five"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+
+            <LinearLayout
+                android:weightSum="4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/sajib"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/redlike"
+                            />
+
+                        <ImageView
+                            android:id="@+id/dollerpic"
+                            android:layout_width="30dp"
+                            android:layout_below="@+id/sajib"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/doller"
+                            />
+
+                        <TextView
+                            android:id="@+id/LiksDoller"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sajib"
+                            android:textSize="30sp"
+                            android:layout_marginLeft="1dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:text="0"
+                            android:layout_toRightOf="@+id/dollerpic"
+                            />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/sajib1"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/coment"
+                            />
+
+                        <ImageView
+                            android:id="@+id/dollerpic1"
+                            android:layout_width="30dp"
+                            android:layout_below="@+id/sajib1"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/doller"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sajib1"
+                            android:textSize="30sp"
+                            android:layout_marginLeft="1dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:text="0"
+                            android:layout_toRightOf="@+id/dollerpic1"
+                            />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:visibility="gone"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/sajib2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/send_post"
+                            />
+
+                        <ImageView
+                            android:id="@+id/dollerpic2"
+                            android:layout_width="30dp"
+                            android:layout_below="@+id/sajib2"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/doller"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sajib2"
+                            android:textSize="30sp"
+                            android:layout_marginLeft="1dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:text="0"
+                            android:layout_toRightOf="@+id/dollerpic2"
+                            />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+ <LinearLayout
+                    android:layout_weight="2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/sajib3"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/followmw_icon"
+                            />
+
+                        <ImageView
+                            android:id="@+id/dollerpic3"
+                            android:layout_width="30dp"
+                            android:layout_below="@+id/sajib3"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="5dp"
+                            android:src="@drawable/doller"
+                            />
+
+                        <TextView
+                            android:id="@+id/FollowMeDoller"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sajib3"
+                            android:textSize="30sp"
+                            android:layout_marginLeft="1dp"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+                            android:text="0"
+                            android:layout_toRightOf="@+id/dollerpic3"
+                            />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

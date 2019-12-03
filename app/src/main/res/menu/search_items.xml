@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    >
+
+    <item
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/SearchID"
+        android:title="Search"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_search_white_24dp"
+        app:actionViewClass="android.widget.SearchView"
+        ></item>
+
+</menu>
