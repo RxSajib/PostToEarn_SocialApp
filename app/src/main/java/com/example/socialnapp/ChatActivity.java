@@ -3,15 +3,12 @@ package com.example.socialnapp;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.view.menu.MenuView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
-import androidx.core.app.ServiceCompat;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -35,6 +32,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.socialnapp.Common.Common;
+import com.example.socialnapp.Model.Message;
 import com.example.socialnapp.Model.Myresponce;
 import com.example.socialnapp.Model.Notification;
 import com.example.socialnapp.Model.Sender;
@@ -53,7 +51,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
@@ -61,19 +58,14 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collections;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Random;
 import java.util.TimeZone;
-import java.util.Timer;
-import java.util.UUID;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit2.Call;
@@ -436,6 +428,15 @@ public class ChatActivity extends AppCompatActivity {
         String timeget = simpleDateFormat1.format(calendartime.getTime());
 
 
+        /// all time
+        Calendar calendaralltime = Calendar.getInstance();
+        SimpleDateFormat alltime_and_date = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss");
+        String all_date_and_time = alltime_and_date.format(calendaralltime.getTime());
+
+        Log.e("all_time", all_date_and_time);
+
+        /// all time
+
         ///reciver time
        // Calendar calendartimekoria = Calendar.getInstance();
        // SimpleDateFormat simpleDateFormatkoria = new SimpleDateFormat("yyyy-MM-dd hh:mm a", Locale.CANADA);
@@ -460,7 +461,9 @@ public class ChatActivity extends AppCompatActivity {
         Map messagetext_body = new HashMap();
         messagetext_body.put("message", messagetext);
         messagetext_body.put("date", dateget);
-        messagetext_body.put("time", timeget);
+       // messagetext_body.put("time", timeget);
+
+        messagetext_body.put("time", all_date_and_time);
         messagetext_body.put("type", "text");
         messagetext_body.put("from", SenderID);
 

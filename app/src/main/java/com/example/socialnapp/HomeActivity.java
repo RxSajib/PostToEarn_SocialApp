@@ -20,11 +20,14 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.socialnapp.Common.Common;
+import com.example.socialnapp.Model.LastTime;
 import com.example.socialnapp.Model.Token;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,12 +38,15 @@ import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.TimeZone;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+
+import static androidx.constraintlayout.widget.Constraints.TAG;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -59,14 +65,21 @@ public class HomeActivity extends AppCompatActivity {
     private DatabaseReference MuserDatabase;
     private int counter = 0;
 
-    private  String TAG ="Push Notification";
+    private String TAG = "Push Notification";
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
+
+
         fcm_token();
+
 
         hometoolbar = findViewById(R.id.HomeToobarID);
         Mauth = FirebaseAuth.getInstance();
@@ -98,8 +111,8 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                if(dataSnapshot.exists()){
-                    if(dataSnapshot.hasChild("image_uri")){
+                if (dataSnapshot.exists()) {
+                    if (dataSnapshot.hasChild("image_uri")) {
                         String image_uriget = dataSnapshot.child("image_uri").getValue().toString();
                         Picasso.with(HomeActivity.this).load(image_uriget).resize(100, 100).placeholder(R.drawable.default_profileimage).into(navimage);
                         Picasso.with(HomeActivity.this).load(image_uriget).placeholder(R.drawable.default_profileimage).into(navimage, new Callback() {
@@ -114,11 +127,11 @@ public class HomeActivity extends AppCompatActivity {
                             }
                         });
                     }
-                    if(dataSnapshot.hasChild("username")){
+                    if (dataSnapshot.hasChild("username")) {
                         String nameget = dataSnapshot.child("username").getValue().toString();
                         navName.setText(nameget);
                     }
-                    if(dataSnapshot.hasChild("email_address")){
+                    if (dataSnapshot.hasChild("email_address")) {
                         String email_addressget = dataSnapshot.child("email_address").getValue().toString();
                         navEmail.setText(email_addressget);
                     }
@@ -139,16 +152,15 @@ public class HomeActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
 
 
-
-                if(menuItem.getItemId() == R.id.ProfileID){
+                if (menuItem.getItemId() == R.id.ProfileID) {
                     Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
                     startActivity(intent);
 
                 }
 
 
-                if(menuItem.getItemId() == R.id.FindFriendsID){
-                    drawerLayout.closeDrawer(Gravity.START);
+                if (menuItem.getItemId() == R.id.FindFriendsID) {
+                    drawerLayout.closeDrawer(Gravity.LEFT);
                     menuItem.setCheckable(true);
                     menuItem.setChecked(true);
                     Intent intent = new Intent(getApplicationContext(), FindFriends_Activity.class);
@@ -156,9 +168,9 @@ public class HomeActivity extends AppCompatActivity {
                     startActivity(intent);
 
                 }
-                if(menuItem.getItemId() == R.id.LogoutID){
+                if (menuItem.getItemId() == R.id.LogoutID) {
                     DisplayOnlineStatas("offline");
-                    drawerLayout.closeDrawer(Gravity.START);
+                    drawerLayout.closeDrawer(Gravity.LEFT);
                     Mauth.signOut();
                     Intent gotologin = new Intent(HomeActivity.this, LoginActivity.class);
                     gotologin.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -166,46 +178,47 @@ public class HomeActivity extends AppCompatActivity {
                     finish();
                 }
 
-                if(menuItem.getItemId() == R.id.EditProfileID){
-                    drawerLayout.closeDrawer(Gravity.START);
+                if (menuItem.getItemId() == R.id.EditProfileID) {
+                    drawerLayout.closeDrawer(Gravity.LEFT);
                     Intent gotoedit = new Intent(HomeActivity.this, ProfileEdit_Activity.class);
                     gotoedit.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(gotoedit);
 
                 }
 
-                if(menuItem.getItemId() == R.id.EarnityID){
-                    drawerLayout.closeDrawer(Gravity.START);;
+                if (menuItem.getItemId() == R.id.EarnityID) {
+                    drawerLayout.closeDrawer(Gravity.LEFT);
+                    ;
                     Intent intent = new Intent(HomeActivity.this, Entry_Activity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }
 
-                if(menuItem.getItemId() == R.id.ShareID){
+                if (menuItem.getItemId() == R.id.ShareID) {
                     counter++;
-                    drawerLayout.closeDrawer(Gravity.START);
+                    drawerLayout.closeDrawer(Gravity.LEFT);
                     Intent intent = new Intent(Intent.ACTION_SEND);
                     intent.setType("text/plain");
 
-                   String  shareMessage = "https://play.google.com/store/apps/details?id="+BuildConfig.APPLICATION_ID +"\n\n";
+                    String shareMessage = "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n";
 
                     String sharebody = shareMessage;
-                    String sharesubject = "Hi, let's start best friendship on Baby Chat - It allows FREE,chat FREE earning ."+"\n\n"+sharebody+"\n"+"share people: "+counter;
+                    String sharesubject = "Hi, let's start best friendship on Baby Chat - It allows FREE,chat FREE earning ." + "\n\n" + sharebody + "\n" + "share people: " + counter;
                     intent.putExtra(Intent.EXTRA_TEXT, sharesubject);
-                  //  intent.putExtra(Intent.EXTRA_SUBJECT, sharebody);
+                    //  intent.putExtra(Intent.EXTRA_SUBJECT, sharebody);
                     startActivity(Intent.createChooser(intent, "share with"));
                 }
 
-                if(menuItem.getItemId() == R.id.RequestID){
-                    drawerLayout.closeDrawer(Gravity.START);
+                if (menuItem.getItemId() == R.id.RequestID) {
+                    drawerLayout.closeDrawer(Gravity.LEFT);
                     menuItem.setCheckable(true);
                     menuItem.setChecked(true);
                     Intent intent = new Intent(HomeActivity.this, Request_Activtiy.class);
                     startActivity(intent);
                 }
 
-                if(menuItem.getItemId() == R.id.WithDowID){
-                    drawerLayout.closeDrawer(Gravity.START);
+                if (menuItem.getItemId() == R.id.WithDowID) {
+                    drawerLayout.closeDrawer(Gravity.LEFT);
                     menuItem.setChecked(true);
                     menuItem.setCheckable(true);
 
@@ -213,8 +226,8 @@ public class HomeActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
 
-                if(menuItem.getItemId() == R.id.AdminID){
-                    drawerLayout.closeDrawer(Gravity.START);
+                if (menuItem.getItemId() == R.id.AdminID) {
+                    drawerLayout.closeDrawer(Gravity.LEFT);
                     menuItem.setCheckable(true);
                     menuItem.setChecked(true);
                     Intent intent = new Intent(getApplicationContext(), Admin_Activity.class);
@@ -230,6 +243,9 @@ public class HomeActivity extends AppCompatActivity {
 
         DisplayOnlineStatas("online");
     }
+
+
+
 
 
     @Override
@@ -251,7 +267,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
-    public void DisplayOnlineStatas(String stats){
+    public void DisplayOnlineStatas(String stats) {
 
         ///date
         Calendar calendardate = Calendar.getInstance();
@@ -276,20 +292,18 @@ public class HomeActivity extends AppCompatActivity {
     private void fcm_token() {
 
 
-
         String refreshedToken = FirebaseInstanceId.getInstance().getToken();
 
 
-      //  if (refreshedToken!="")
+        //  if (refreshedToken!="")
 
 
+        Log.i(TAG, "fcm_token: " + refreshedToken);
 
-        Log.i(TAG, "fcm_token: "+refreshedToken);
 
-
-        FirebaseDatabase db=FirebaseDatabase.getInstance();
-        DatabaseReference referance=db.getReference("Token");
-        Token token=new Token(refreshedToken,true);
+        FirebaseDatabase db = FirebaseDatabase.getInstance();
+        DatabaseReference referance = db.getReference("Token");
+        Token token = new Token(refreshedToken, true);
         referance.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(token);
 
 
@@ -308,30 +322,30 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
 
+
         DisplayOnlineStatas("online");
         FirebaseUser Muser = Mauth.getCurrentUser();
-        if(Muser == null){
+        if (Muser == null) {
             Intent gotologin = new Intent(HomeActivity.this, LoginActivity.class);
             gotologin.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
             startActivity(gotologin);
             finish();
-        }
-        else {
+        } else {
             cheackuserexsists();
         }
 
         super.onStart();
     }
 
-    private void cheackuserexsists(){
+    private void cheackuserexsists() {
 
         final String UserID = Mauth.getCurrentUser().getUid();
         MuserDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                if (!dataSnapshot.hasChild("username") ) {
+                if (!dataSnapshot.hasChild("username")) {
                     Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     Toast.makeText(getApplicationContext(), "Please setup your profile", Toast.LENGTH_LONG).show();
@@ -350,14 +364,14 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
-            if(item.getItemId() == android.R.id.home){
-                drawerLayout.openDrawer(Gravity.START);
-            }
+        if (item.getItemId() == android.R.id.home) {
+            drawerLayout.openDrawer(Gravity.LEFT);
+        }
 
-            if(item.getItemId() == R.id.PostID){
-                Intent intent = new Intent(HomeActivity.this, AddPost_Activity.class);
-                startActivity(intent);
-            }
+        if (item.getItemId() == R.id.PostID) {
+            Intent intent = new Intent(HomeActivity.this, AddPost_Activity.class);
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
     }
 }

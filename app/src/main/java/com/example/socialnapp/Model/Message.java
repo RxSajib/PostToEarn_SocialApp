@@ -1,4 +1,4 @@
-package com.example.socialnapp;
+package com.example.socialnapp.Model;
 
 public class Message {
 
