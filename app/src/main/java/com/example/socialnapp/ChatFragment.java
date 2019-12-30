@@ -78,6 +78,11 @@ public class ChatFragment extends Fragment {
     private ArrayList<String> user_uid_list = new ArrayList<>();
 
     final ArrayList<LastTime> _time_list = new ArrayList<>();
+    final ArrayList<LastTime> _final_time_list = new ArrayList<>();
+    final ArrayList<LastTime> _final_temp_time_list = new ArrayList<>();
+
+
+    final  ArrayList<String> _id_list=new ArrayList<>();
 
 
     // private ArrayList<String> time_list = new ArrayList<>();
@@ -222,6 +227,8 @@ public class ChatFragment extends Fragment {
         }
 
 
+        //  _final_time_list.clear();
+
         for (int i = 0; i < _time_list.size(); i++) {
 
 
@@ -229,29 +236,83 @@ public class ChatFragment extends Fragment {
 
             if (_time_list.get(i).getUiId().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
 
+
+                Log.e("Remove", "shortListWithTime: " + _time_list.get(i).getUiId());
+
                 _time_list.remove(i);
+
+            } else {
+
+                Log.e("SAVE", "shortListWithTime: " + _time_list.get(i).getUiId());
+
+                _final_time_list.add(_time_list.get(i));
+
 
             }
 
 
-         /*   for (int j = i + 1; j < _time_list.size(); j++) {
+        }
 
-                if (_time_list.get(i).getUiId().equals(_time_list.get(j).getUiId())) {
 
-                    _time_list.remove(j);
+        int n = _final_time_list.size();
+
+
+        for (int i = 0; i < n; i++) {
+
+
+            Log.e("ShortedTime " + i, "NOTTTTTTTT :   " + _final_time_list.get(i).getUiId() + "   " + _final_time_list.get(i).getTime());
+        }
+
+
+        for (int i = 0; i < n; i++) {
+
+
+            for (int j = i + 1; j < n; j++) {
+
+                Log.e("LENGTH", "shortListWithTime: NOWWWWWWWWW " + _final_time_list.size() + "  i=  " + i + "  j = " + j);
+
+
+                try {
+
+                    if (_final_time_list.get(i).getUiId().equals(_final_time_list.get(j).getUiId())) {
+
+
+                        _final_time_list.set(j, new LastTime("",""));
+
+
+                    }
+
+                } catch (Exception e) {
+
                 }
 
-            }*/
+            }
 
 
         }
 
 
-        for (int i = 0; i < _time_list.size(); i++) {
 
-            Log.e("ShortedTime " + i, "NOWWWWWWWWW :   " + _time_list.get(i).getUiId() + "   " + _time_list.get(i).getTime());
+
+
+
+        for(int i=0;i<_final_time_list.size();i++){
+
+            if( _final_time_list.get(i).getUiId() !="" ){
+
+                _id_list.add(_final_time_list.get(i).getUiId());
+            }else {
+
+            }
 
         }
+
+        for (int i = 0; i < _id_list.size(); i++) {
+
+
+            Log.e("ShortedTime " + i, "NOWWWWWWWWW :   " + _id_list.get(i));
+        }
+
 
     }
 
